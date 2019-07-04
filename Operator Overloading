@@ -1,0 +1,18 @@
+class number:
+    def __init__(self,n1,n2):
+        self.n1=n1
+        self.n2=n2
+
+    def __add__(self,second):   #overloading add method
+        n1=self.n1+second.n1
+        n2=self.n2+second.n2
+
+        O3=number(n1,n2)
+
+        return O3
+
+O1=number(50,30)
+O2=number(60,40)
+
+O3=O1+O2
+print(O3.n1)
