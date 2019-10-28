@@ -1,0 +1,159 @@
+# import timeit
+# def ins(pos,data):
+#     L=[1,2,3,4,5,6]
+#     L1=L[0:pos]
+#     L2=L[pos:len(L)]
+#     L1.append(data)
+#     L4=L1+L2
+#     print(L4)
+# t1=timeit.timeit()
+# ins(3,99)
+# t2=timeit.timeit()
+# print("The time for algo A2.1 is",(t1-t2))
+#
+#
+# t3=timeit.timeit()
+# O=[1,2,3,4,5,6]
+# O.insert(3,99)
+# print(O)
+# t4=timeit.timeit()
+#
+# print("The time for built in function is",(t3-t4))
+# import timeit
+# def dele(data):
+#     L=[1,2,3,4,5,6]
+#     for x in L:
+#         if x==data:
+#             a=L.index(x)
+#             L1=L[0:a]
+#             L2=L[a+1:(len(L))]
+#             L3=L1+L2
+#             print(L3)
+# t1=timeit.timeit()
+# dele(5)
+# t2=timeit.timeit()
+# print("The time for algo A2.2 is",(t1-t2))
+#
+# t3=timeit.timeit()
+# O=[1,2,3,4,5,6]
+# O.remove(5)
+# print(O)
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+# import timeit
+# def search(data):
+#     L=[1,2,3,4,5,6]
+#     #a = L.index(data)
+#     for i in range(len(L)):
+#         if data==L[i]:
+#             print("index value of",data,"is",i)
+# t1=timeit.timeit()
+# search(3)
+# t2=timeit.timeit()
+# print("The time for algo A2.3 is",(t1-t2))
+#
+# t3=timeit.timeit()
+# O=[1,2,3,4,5,6]
+# O.index(3)
+# print("index value of is",O.index(3))
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+
+
+# import timeit
+# def ins(pos,data):
+#     D={1: 2, 3: 4, 5: 6, 7: 8}
+#     L = []
+#     for key, value in D.items():
+#         L.append([key, value])
+#     L1=L[0:pos]
+#     L2=L[pos:len(L)]
+#     L1.append(data)
+#     L4=L1+L2
+#     print(dict(L4))
+# t1=timeit.timeit()
+# ins(2,(55,22))
+# t2=timeit.timeit()
+# print("The time for algo A2.1 is",(t1-t2))
+# t3=timeit.timeit()
+#
+# D={1: 2, 3: 4, 5: 6, 7: 8}
+# D[9]=10
+# print(D)
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+import timeit
+# def dele(data):
+#
+#     D={1: 2, 3: 4, 5: 6, 7: 8}
+#     for k in D.copy():
+#         if k==data:
+#             D.pop(data)
+#     print(D)
+# t1=timeit.timeit()
+# dele(3)
+# t2=timeit.timeit()
+# print("The time for algo A2.1 is",(t1-t2))
+#
+# t3=timeit.timeit()
+# D={1: 2, 3: 4, 5: 6, 7: 8}
+# D.pop(3)
+# print(D)
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+# def search(data):
+#     D = {1: 2, 3: 4, 5: 6, 7: 8}
+#     for k in D.keys():
+#         if k==data:
+#             print("key of that dictionary is:",k, "and its VALUE is",D[k])
+#
+# t1=timeit.timeit()
+# search(7)
+# t2=timeit.timeit()
+# print("The time for algo A2.3 is",(t1-t2))
+#
+# t3=timeit.timeit()
+# D={1: 2, 3: 4, 5: 6, 7: 8}
+# print("search element value wrt key is",D.get(7))
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+# def search (data):
+#     T=(1,2,5,7,9)
+#     for x in range(len(T)):
+#         i = T[x]
+#         if data == i:
+#             print("pos of searched element",data, "is:", i)
+#
+# t1=timeit.timeit()
+# search(7)
+# t2=timeit.timeit()
+# print("The time for algo A2.3 is",(t1-t2))
+#
+# t3=timeit.timeit()
+# T=(1,2,5,7,9)
+# S=T.index(2)
+# print("search element is",S)
+# t4=timeit.timeit()
+# print("The time for built in function is",(t3-t4))
+import timeit
+def ins(pos,data):
+    T=(1,2,3,4,5,6)
+    L=list(T)
+    L1=L[0:pos]
+    L2=L[pos:len(L)]
+    L1.append(data)
+    L4=L1+L2
+    print(tuple(L4))
+t1=timeit.timeit()
+ins(3,99)
+t2=timeit.timeit()
+print("The time for algo A2.1 is",(t1-t2))
+
+
+t3=timeit.timeit()
+O=[1,2,3,4,5,6]
+O=list(O)
+O.insert(2,66)
+print(tuple(O))
+t4=timeit.timeit()
+print("The time for built in function is", (t3 - t4))
